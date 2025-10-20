@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  cov-report:
+  build:
     runs-on: ubuntu-latest
     
     steps:
