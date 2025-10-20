@@ -1,0 +1,17 @@
+name: Generate Coverage Report
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  make-cov-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+          files: coverage.xml
